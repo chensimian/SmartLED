@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sq.wolf.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_register"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="智能灯光监控"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.sq.wolf.SwitchCustom
+        android:id="@+id/sc_led"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:bottomBorderVisible="false"
+        app:leftText="模式切换"
+        app:status="false" />
+
+    <com.sq.wolf.NavigationCustom
+        android:id="@+id/nc_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:leftText="工作模式"
+        app:rightText="0°C"
+        app:bottomBorderVisible="false"
+        />
+    <com.sq.wolf.NavigationCustom
+        android:id="@+id/nc_hj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:leftText="环境亮度"
+        app:rightText="0°C"
+        app:bottomBorderVisible="false"
+        />
+
+    <com.sq.wolf.NavigationCustom
+        android:id="@+id/nc_hc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftText="人体感应"
+        app:rightText="0%"
+        app:bottomBorderVisible="false"
+        />
+    <com.sq.wolf.NavigationCustom
+        android:id="@+id/nc_pwm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftText="灯光亮度"
+        app:rightText="0%"
+        app:bottomBorderVisible="false"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="12dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:text="亮度设置"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/iv_led"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/light_off"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
